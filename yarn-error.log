@@ -1,0 +1,36 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/Cellar/yarn/1.22.15/libexec/bin/yarn.js init
+
+PATH: 
+  /Users/development/.rvm/gems/ruby-3.0.1/bin:/Users/development/.rvm/gems/ruby-3.0.1@global/bin:/Users/development/.rvm/rubies/ruby-3.0.1/bin:/Users/development/.rbenv/shims:/usr/local/opt/ruby/bin:/Users/development/.composer/vendor/bin:/usr/local/opt/php@7.4/sbin:/usr/local/opt/php@7.4/bin:/Users/development/Downloads/flutter/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Library/Apple/usr/bin:/Users/development/.rvm/gems/ruby-3.0.1/bin:/Users/development/.rvm/gems/ruby-3.0.1@global/bin:/Users/development/.rvm/rubies/ruby-3.0.1/bin:/Users/development/.rbenv/shims:/usr/local/opt/ruby/bin:/Users/development/.composer/vendor/bin:/usr/local/opt/php@7.4/sbin:/usr/local/opt/php@7.4/bin:/Users/development/Downloads/flutter/bin:/Users/development/Library/Android/sdk/tools:/Users/development/Library/Android/sdk/platform-tools:/Users/development/.rvm/bin:/Users/development/src/flutter/bin:/Users/development/go/bin:/Users/development/Library/Android/sdk/tools:/Users/development/Library/Android/sdk/platform-tools:/Users/development/.rvm/bin:/Users/development/src/flutter/bin:/Users/development/go/bin
+
+Yarn version: 
+  1.22.15
+
+Node version: 
+  14.18.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: canceled
+      at Interface.<anonymous> (/usr/local/Cellar/yarn/1.22.15/libexec/lib/cli.js:137145:13)
+      at Interface.emit (events.js:400:28)
+      at Interface._ttyWrite (readline.js:1001:16)
+      at ReadStream.onkeypress (readline.js:265:10)
+      at ReadStream.emit (events.js:400:28)
+      at emitKeys (internal/readline/utils.js:358:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (readline.js:1270:36)
+      at ReadStream.emit (events.js:400:28)
+      at addChunk (internal/streams/readable.js:293:12)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

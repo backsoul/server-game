@@ -1,0 +1,8 @@
+services:
+  ws:
+    build: .
+    environment:
+      - VIRTUAL_HOST=ws.backsoul.xyz
+      - VIRUTAL_POST=80
+      - LETSENCRYPT_HOST=ws.backsoul.xyz
+      - LETSENCRYPT_EMAIL=danielsarmientoenterprise@gmail.com
