@@ -2,8 +2,6 @@ version: '3'
 services:
   ws:
     build: .
-    ports:
-      - "8080:8080"
     environment:
       - VIRTUAL_HOST=ws.backsoul.xyz
       - VIRUTAL_POST=8080
