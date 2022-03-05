@@ -2,9 +2,11 @@ version: '3'
 services:
   ws:
     build: .
+    ports:
+      - "8080:8080"
     environment:
       - VIRTUAL_HOST=ws.backsoul.xyz
-      - VIRUTAL_POST=80
+      - VIRUTAL_POST=8080
       - LETSENCRYPT_HOST=ws.backsoul.xyz
       - LETSENCRYPT_EMAIL=danielsarmientoenterprise@gmail.com
     networks:
