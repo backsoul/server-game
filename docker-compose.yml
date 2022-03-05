@@ -7,3 +7,8 @@ services:
       - VIRUTAL_POST=80
       - LETSENCRYPT_HOST=ws.backsoul.xyz
       - LETSENCRYPT_EMAIL=danielsarmientoenterprise@gmail.com
+    networks:
+      - web
+networks:
+  web:
+    external: true
