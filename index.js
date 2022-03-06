@@ -36,30 +36,35 @@ wss.getUniqueID = function() {
 };
 
 const topics = {
-    'registry': function(data, ws) {
+    'registry': function(data, ws, wss) {
         listPlayers.push(new PlayerObject(data.id, data.position));
-        ws.send(JSON.stringify({
-            type: 'registry',
-            data: {
-                id: data.id,
-            }
-        }));
+        wss.clients.forEach(function each(client) {
+            client.send(JSON.stringify({
+                type: 'registry',
+                data: {
+                    id: data.id,
+                }
+            }));
+        });
     },
-    'setPosition': function(data, ws) {
+    'setPosition': function(data, ws, wss) {
         var player = listPlayers.find(player => player.id == data.id);
         player.setPosition(data.position.x, data.position.y);
-        ws.send(JSON.stringify({
-            topic: 'setPosition',
-            data: player.getUser()
-        }));
+        wss.clients.forEach(function each(client) {
+            client.send(JSON.stringify({
+                topic: 'setPosition',
+                data: player.getUser()
+            }));
+        });
     }
 }
 
 wss.on('connection', function connection(ws) {
     console.log('new connection')
     ws.on('message', (data) => {
+        // emit all message to all clients
         var data = JSON.parse(data);
-        topics[data.topic](data.data, ws)
+        topics[data.topic](data.data, ws, wss)
     })
     wss.on('listening', () => {
         console.log('listening on 8080')
