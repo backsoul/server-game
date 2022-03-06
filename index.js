@@ -43,6 +43,7 @@ const topics = {
                 type: 'registry',
                 data: {
                     id: data.id,
+                    position: data.position
                 }
             }));
         });
