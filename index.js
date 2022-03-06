@@ -51,6 +51,7 @@ const topics = {
     'setPosition': function(data, ws, wss) {
         var player = listPlayers.find(player => player.id == data.id);
         player.setPosition(data.position.x, data.position.y);
+        console.log(player.getUser());
         wss.clients.forEach(function each(client) {
             client.send(JSON.stringify({
                 topic: 'setPosition',
